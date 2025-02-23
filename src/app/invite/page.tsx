@@ -4,6 +4,7 @@ import { Copy, Link } from 'lucide-react'
 import Image from 'next/image'
 import logo from '../../assets/logo.svg'
 import { Ranking } from './ranking'
+import { Stats } from './stats'
 
 export default function InvitePage() {
   return (
@@ -43,23 +44,10 @@ export default function InvitePage() {
             </IconButton>
           </InputRoot>
 
-          <div className="grid gap-3 md:grid-cols-3">
-            <div className="bg-gray-700 border border-gray-600 px-4 py-7 flex flex-col items-center justify-center gap-1 rounded-xl">
-              <span className="font-heading text-2xl font-semibold text-gray-200 leading-none">1p222</span>
-              <span className="text-sm text-gray-300  leading-none text-center">Acesse ao link</span>
-            </div>
-            <div className="bg-gray-700 border border-gray-600 px-4 py-7 flex flex-col items-center justify-center gap-1 rounded-xl">
-              <span className="font-heading text-2xl font-semibold text-gray-200 leading-none">1p222</span>
-              <span className="text-sm text-gray-300  leading-none text-center">Acesse ao link</span>
-            </div>
-            <div className="bg-gray-700 border border-gray-600 px-4 py-7 flex flex-col items-center justify-center gap-1 rounded-xl">
-              <span className="font-heading text-2xl font-semibold text-gray-200 leading-none">1p222</span>
-              <span className="text-sm text-gray-300  leading-none text-center">Acesse ao link</span>
-            </div>
-          </div>
+          <Stats />
         </div>
       </div>
-      <Ranking/>
+      <Ranking />
     </div>
   )
 }
