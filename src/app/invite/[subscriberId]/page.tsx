@@ -1,21 +1,19 @@
 import Image from 'next/image'
 import logo from '../../../assets/logo.svg'
 
+import { string } from 'zod'
 import { InviteLinkInput } from './invite-link-input'
 import { Ranking } from './ranking'
 import { Stats } from './stats'
-import { string } from 'zod'
-
 
 interface InvitePageProps {
-params: Promise<{
-  subscriberId:string
-}>
+  params: Promise<{
+    subscriberId: string
+  }>
 }
 
-export default async function InvitePage(props:InvitePageProps) {
-
-  const {subscriberId}  = await props.params
+export default async function InvitePage(props: InvitePageProps) {
+  const { subscriberId } = await props.params
 
   const inviteLink = `http://localhost:3333/invites/${subscriberId}`
 
@@ -48,7 +46,7 @@ export default async function InvitePage(props:InvitePageProps) {
 
         <InviteLinkInput inviteLink={inviteLink} />
 
-        <Stats />
+        <Stats subscriberId={subscriberId} />
       </div>
 
       <Ranking />

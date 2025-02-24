@@ -30,7 +30,8 @@
 	  }
 	},
 	"files": {
-	  "ignore": ["node_modules", "**/*.css"]
+	  "ignore": ["node_modules", "**/*.css", "src/http/api.ts"]
+
 	}
   }
   
